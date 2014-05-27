@@ -6,9 +6,19 @@ import (
 )
 
 func TestDoFizzBuzz(t *testing.T) {
-	var result string = fizzbuzz.DoFizzBuzz(1)
+	var testCases = []struct {
+		actual   int
+		expected string
+	}{
+		{1, "1"},
+		{2, "2"},
+	}
 
-	if result != "1" {
-		t.Errorf("expect %s but was %s", "1", result)
+	for _, example := range testCases {
+		var result string = fizzbuzz.DoFizzBuzz(example.actual)
+
+		if result != example.expected {
+			t.Errorf("expect %s but was %s", example.expected, result)
+		}
 	}
 }
