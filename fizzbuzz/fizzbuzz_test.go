@@ -15,6 +15,7 @@ func TestDoFizzBuzz(t *testing.T) {
 		{3, "Fizz"},
 		{5, "Buzz"},
 		{6, "Fizz"},
+		{10, "Buzz"},
 	}
 
 	for _, example := range testCases {
