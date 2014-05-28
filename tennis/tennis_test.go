@@ -12,3 +12,16 @@ func TestPlayer(t *testing.T) {
 		t.Errorf("player expected not nil")
 	}
 }
+
+func TestTennisHasTwoPlayers(t *testing.T) {
+	var player1 = tennis.NewPlayer()
+	var player2 = tennis.NewPlayer()
+	var tenniz *tennis.Tennis = tennis.NewTennis(player1, player2)
+
+	if tenniz.PlayerOne() != player1 {
+		t.Errorf("expected %v but was %v", tenniz.PlayerOne(), player1)
+	}
+	if tenniz.PlayerTwo() != player2 {
+		t.Errorf("expected %v but was %v", tenniz.PlayerTwo(), player2)
+	}
+}
