@@ -25,3 +25,11 @@ func TestTennisHasTwoPlayers(t *testing.T) {
 		t.Errorf("expected %v but was %v", tenniz.PlayerTwo(), player2)
 	}
 }
+
+func TestPlayerShouldHasZeroScore(t *testing.T) {
+	var player *tennis.Player = tennis.NewPlayer()
+
+	if player.Score() != 0 {
+		t.Errorf("expected player has score 0 but was %d", player.Score())
+	}
+}
