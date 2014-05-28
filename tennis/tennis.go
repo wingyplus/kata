@@ -1,17 +1,5 @@
 package tennis
 
-type Player struct {
-	score int
-}
-
-func NewPlayer() *Player {
-	return &Player{}
-}
-
-func (player *Player) Score() int {
-	return player.score
-}
-
 type Tennis struct {
 	player1, player2 *Player
 }
